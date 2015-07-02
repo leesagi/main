@@ -18,6 +18,6 @@ CMD = "git pull"
 gPull = subprocess.check_output(CMD, stderr=subprocess.STDOUT, shell=True)
 print gPull
 
-CMD = "s3cmd sync . s3://ods-working/git/"
+CMD = "aws s3 sync . s3://ods-working/git/"
 gPull = subprocess.check_output(CMD, stderr=subprocess.STDOUT, shell=True)
 print gPull
